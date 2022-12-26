@@ -28,7 +28,7 @@ int main() {
     // *ptr = &num;
 
     // can be of any type
-    float* ptr2;
+    float* ptr3;
 
     return 0;
 }
