@@ -46,6 +46,7 @@ int main() {
   // Push some countries onto the stack
   push("France");
   cout << "France pushed into stack" << endl;
+  // 👆 we can show this messages either after the funcion like this or we can also show them inside the push function. I thought is is easier for you, so I implemented this one.
   
   push("Russia");
   cout << "Russia pushed into stack" << endl;
