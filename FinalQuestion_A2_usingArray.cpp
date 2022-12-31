@@ -16,29 +16,26 @@ bool empty() {
 // Pushes an element onto the stack
 void push(string element) {
   if (top == MAX_SIZE - 1) {
-    cerr << "Error: Stack overflow" << endl;
+    cout << "Error: Stack overflow" << endl;
     return;
   }
   top++;
   stack[top] = element;
-  
-  cout << element << " pushed into stack" << endl;
 }
 
 // Removes the top element from the stack
 void pop() {
   if (empty()) {
-    cerr << "Error: Stack underflow" << endl;
+    cout << "Error: Stack underflow" << endl;
     return;
   }
-  cout << stack[top] << " popped from stack" << endl;
   top--;
 }
 
 // Returns the value of the top element in the stack
 string peek() {
   if (empty()) {
-    cerr << "Error: Stack is empty" << endl;
+    cout << "Error: Stack is empty" << endl;
     return "";
   }
   return stack[top];
@@ -48,20 +45,25 @@ string peek() {
 int main() {
   // Push some countries onto the stack
   push("France");
-
+  cout << "France pushed into stack" << endl;
+  
   push("Russia");
+  cout << "Russia pushed into stack" << endl;
 
   // Check the top element of the stack
   cout << "Top Country is " << peek() << endl;
 
   // Push another country onto the stack
   push("Turkey");
+  cout << "Turkey pushed into stack" << endl;
 
   // Pop the top element from the stack
   pop();
+  cout << "Turkey popped from stack" << endl;
 
   // Pop the top element from the stack
   pop();
+  cout << "Russia popped from stack" << endl;
 
   // Check the top element of the stack
   cout << "Top Country is " << peek() << endl;
@@ -85,11 +87,13 @@ int main() {
 //   int top;
 
 // public:
-//   Stack() : top(-1) {}
+//   Stack(){
+//     top = -1;
+//   }
 
 //   void push(string element) {
 //     if (top == MAX_SIZE - 1) {
-//       cerr << "Error: Stack overflow" << endl;
+//       cout << "Error: Stack overflow" << endl;
 //       return;
 //     }
 //     stack[++top] = element;
@@ -97,7 +101,7 @@ int main() {
 
 //   void pop() {
 //     if (empty()) {
-//       cerr << "Error: Stack underflow" << endl;
+//       cout << "Error: Stack underflow" << endl;
 //       return;
 //     }
 //     top--;
@@ -105,7 +109,7 @@ int main() {
 
 //   string peek() {
 //     if (empty()) {
-//       cerr << "Error: Stack is empty" << endl;
+//       cout << "Error: Stack is empty" << endl;
 //       return "";
 //     }
 //     return stack[top];
