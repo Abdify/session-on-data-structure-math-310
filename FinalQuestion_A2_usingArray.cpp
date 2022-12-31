@@ -3,10 +3,8 @@
 
 using namespace std;
 
-const int MAX_SIZE = 100;
-
-
 // Global variables
+const int MAX_SIZE = 100;
 string stack[MAX_SIZE];
 int top = -1;
 
@@ -21,7 +19,10 @@ void push(string element) {
     cerr << "Error: Stack overflow" << endl;
     return;
   }
-  stack[++top] = element;
+  top++;
+  stack[top] = element;
+  
+  cout << element << " pushed into stack" << endl;
 }
 
 // Removes the top element from the stack
@@ -30,6 +31,7 @@ void pop() {
     cerr << "Error: Stack underflow" << endl;
     return;
   }
+  cout << stack[top] << " popped from stack" << endl;
   top--;
 }
 
@@ -46,25 +48,20 @@ string peek() {
 int main() {
   // Push some countries onto the stack
   push("France");
-  cout << "France pushed into stack" << endl;
 
   push("Russia");
-  cout << "Russia pushed into stack" << endl;
 
   // Check the top element of the stack
   cout << "Top Country is " << peek() << endl;
 
   // Push another country onto the stack
   push("Turkey");
-  cout << "Turkey pushed into stack" << endl;
 
   // Pop the top element from the stack
   pop();
-  cout << "Turkey popped from stack" << endl;
 
   // Pop the top element from the stack
   pop();
-  cout << "Russia popped from stack" << endl;
 
   // Check the top element of the stack
   cout << "Top Country is " << peek() << endl;
