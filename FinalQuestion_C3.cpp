@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int binarySearch(char items[], int item, int low, int high){
+int binarySearch(char items[], char item, int low, int high){
     while(low <= high){
         int mid = (high + low) / 2;
         
